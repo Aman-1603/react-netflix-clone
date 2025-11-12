@@ -16,9 +16,28 @@ const Hero = () =>{
             setmovie(randomMovies);
         });
     },[]);
+
+    if(!movie){
+      return(
+        <>
+        <p>Fething movie please wait....</p>
+        </>
+      );
+    }
+
+    const{title, backdrop_path,release_date, overview} = movie;
   
     return (
-      <div className="text-5xl">Hero</div>
+      <div className="w-full h-[550px] lg:h-[850px]">
+        <div className="w-full h-full">
+          <div className="absolute w-full h-[550px] bg-gradient-to-r from-black">
+            <img src={`https://image.tmdb.org/t/p/original/${backdrop_path}`}
+            alt={title}
+            />
+            
+          </div>
+        </div>
+      </div>
     );
 }
 
