@@ -22,4 +22,6 @@
 
 body{
   font-family: 'Nsans Regular', Tahoma, Geneva, Verdana, sans-serif;
+  @apply bg-black text-white;
+  color: white !important;
 }
